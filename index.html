@@ -2,51 +2,7 @@
 <html>
 <head>
 	<title>bt</title>
-	<style type="text/css">
-		body
-		{
-			background-color: #000000;
-			color: #00FF00;
-			font-family: Consolas;
-			font-size: 12px;
-			padding-left: 50px;
-		}
-		#terminal
-		{
-			position: fixed;
-			right: 50px;
-			top: 50px;
-			border: 2px solid #FFFFFF;
-		}
-		#terminal p
-		{
-			font-weight: bold;
-			text-align: center;
-			font-size: 13px;
-		}
-		#terminal marquee
-		{
-			width: 500px;
-			line-height: 40px;
-			margin-left: 50px;
-		}
-		#terminal img
-		{
-			width: 600px;
-			border-top: 2px solid #FFFFFF;
-		}
-		#btn-terminal
-		{
-			position: fixed;
-			right: 10px;
-			top: 10px;
-			width: 50px;
-			height: 20px;
-			background-color: #00FF00;
-			color: #000000;
-			cursor: pointer;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
 
@@ -61,46 +17,7 @@
 	</div>
 
 	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript">
-		var flag = false;
-		$("#terminal").hide();
-		$("#btn-terminal").click(function () {
-			if (flag) {
-				$("#terminal").hide();
-				$("#btn-terminal").html("Run")
-				flag = false;
-			} else {
-				$("#terminal").show();
-				$("#btn-terminal").html("Stop")
-				flag = true;
-			}
-			
-		});
-	</script>
-	<script type="text/javascript">
-		var content;
-		$.ajax({
-			url: "data/content.json",
-			dataType: "text",
-			success: function(data) {
-				content = JSON.parse(data);
-				
-
-			},
-			error: function(data) {
-				alert("Failed");
-			}
-		});
-
-		var i = 0;
-		$("body").keyup(function () {
-			$("body").append(content[i]);
-			if (i == content.length) {
-				i = 0;
-			} else {
-				i++;
-			}
-		})
-	</script>
+	<script type="text/javascript" src="./js/app.js"></script>
+	
 </body>
 </html>

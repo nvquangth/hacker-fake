@@ -1,0 +1,43 @@
+body
+{
+	background-color: #000000;
+	color: #00FF00;
+	font-family: Consolas;
+	font-size: 12px;
+	padding-left: 50px;
+}
+#terminal
+{
+	position: fixed;
+	right: 50px;
+	top: 50px;
+	border: 2px solid #FFFFFF;
+}
+#terminal p
+{
+	font-weight: bold;
+	text-align: center;
+	font-size: 13px;
+}
+#terminal marquee
+{
+	width: 500px;
+	line-height: 40px;
+	margin-left: 50px;
+}
+#terminal img
+{
+	width: 600px;
+	border-top: 2px solid #FFFFFF;
+}
+#btn-terminal
+{
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 50px;
+	height: 20px;
+	background-color: #00FF00;
+	color: #000000;
+	cursor: pointer;
+}
